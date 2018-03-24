@@ -10,7 +10,10 @@ import Api from './Api/Index'
 class App extends Component {
   render() {
     return (
-      <Camera />
+      <Navigation
+        Camera = {Camera}
+        Quiz = {Quiz}
+      />
     )
   }
 }
