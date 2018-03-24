@@ -10,9 +10,7 @@ import Api from './Api/Index'
 class App extends Component {
   render() {
     return (
-      <View>
-        <Navigation />
-      </View>
+      <Camera />
     )
   }
 }
