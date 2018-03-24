@@ -16,9 +16,6 @@ export default class Api extends Component {
       .catch(function(err){
         console.log(err)
       })
-    //this.setState({
-    //  sets : 
-    //});
   }
 
   render() {
@@ -33,4 +30,3 @@ export default class Api extends Component {
     )
   }
 }
-
