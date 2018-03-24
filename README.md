@@ -12,15 +12,15 @@ This app is currently being worked on and is top-secret. We are unable to public
 * [Julia](https://julialang.org) - Better than Python
 * [JavaScript](https://www.javascript.com) - We must use node.js
 
-## License
-
-This app is probably going to be licensed by the MIT License
-
 ## Authors
 
 * **My Boi Reni**
 * **Thotsaphon (Ben) Janrungrodsakun**
 * et al.
+
+## License
+
+This app is probably going to be licensed by the MIT License
 
 ## Acknowledgements
 
