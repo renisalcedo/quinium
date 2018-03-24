@@ -1,0 +1,4 @@
+[o] - Number of Questions
+[X] - personsList
+[o] - Term (quizlet API)
+[o] - Definitions (quizlet API)
