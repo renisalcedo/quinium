@@ -14,7 +14,7 @@ This app is currently being worked on and is top-secret. We are unable to public
 
 ## Authors
 
-* **My Boi Reni**
+* **My Boi, Reni Salcedo**
 * **Thotsaphon (Ben) Janrungrodsakun**
 * et al.
 
