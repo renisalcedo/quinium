@@ -16,6 +16,7 @@ This app is currently being worked on and is top-secret. We are unable to public
 
 * **My Boi, Reni Salcedo**
 * **Thotsaphon (Ben) Janrungrodsakun**
+* **Maksymilian (Max) M. Rago** (https://github.com/maksymilianmrago and https://gitgud.io/117chan)
 * et al.
 
 ## License
