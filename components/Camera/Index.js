@@ -4,6 +4,8 @@ import { Camera, Permissions } from 'expo';
 
 import axios from 'axios'
 
+import TextData from './TextData'
+
 export default class CameraComponent extends React.Component {
   constructor(props) {
     super(props)
@@ -19,7 +21,10 @@ export default class CameraComponent extends React.Component {
 
   async componentWillMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
-    this.setState({ hasCameraPermission: status === 'granted' });
+    this.setState({
+      hasCameraPermission: status === 'granted',
+      textData: '',
+    });
   }
 
   render() {
@@ -76,6 +81,8 @@ export default class CameraComponent extends React.Component {
               </TouchableOpacity>
             </View>
           </Camera>
+
+          <TextData data={ this.state.textData } />
         </View>
       );
     }
@@ -94,8 +101,7 @@ export default class CameraComponent extends React.Component {
   }
 
   uploadPicture() {
-    console.log(this.state.pic)
-    const url = 'https://5596e272.ngrok.io/recognize'
+    const url = 'https://c08c8de0.ngrok.io/recognize'
     const form = new FormData()
 
     form.append('recognize', {
@@ -109,7 +115,9 @@ export default class CameraComponent extends React.Component {
         'Content-Type': 'multipart/form-data'
       }
     })
-      .then(res => res.data)
-      .catch(err => err)
+      .then(res => {
+        this.setState({ textData: res.data })
+      })
+      .catch(err => console.log(err))
   }
 }
