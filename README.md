@@ -14,14 +14,15 @@ This app is currently being worked on and is top-secret. We are unable to public
 
 ## Authors
 
-* **My Boi, Reni Salcedo**
-* **Thotsaphon (Ben) Janrungrodsakun**
+* **My Boi, Reni Salcedo** - [renisalcedo](https://github.com/renisalcedo)
+* **Thotsaphon (Ben) Janrungrodsakun** - [ThotsaphonB](https://github.com/ThotsaphonB)
 * **Maksymilian (Max) M. Rago** (https://github.com/maksymilianmrago and https://gitgud.io/117chan)
-* et al.
+* **Winnie Tan** - [bubble29](https://github.com/bubble29)
+* **Vincent Xie** - [PokeLegoCuber](https://github.com/PokeLegoCuber)
 
 ## License
 
-This app is probably going to be licensed by the MIT License
+This project is licensed by the MIT License.
 
 ## Acknowledgements
 
