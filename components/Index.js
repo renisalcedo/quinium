@@ -10,7 +10,10 @@ import Api from './Api/Index'
 class App extends Component {
   render() {
     return (
-      <View>
+      <View style={{
+        paddingVertical: 20
+      }}>
+        <Api />
         <Navigation />
       </View>
     )
