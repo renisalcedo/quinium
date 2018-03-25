@@ -6,9 +6,10 @@ This app is currently being worked on and is top-secret. We are unable to public
 
 ## Built With
 
-* [JavaScript](https://www.javascript.com/) - The foundation
-* [React Native](https://facebook.github.io/react-native/) - v8.10.0, the core 
-* [yarn](https://yarnpkg.com/en/) - v1.5.1, dependency management 
+* [JavaScript](https://www.javascript.com/) - The foundational language
+* [Node.js](https://nodejs.org/en/) - v8.10.0, the gift sent from the High Heavens
+* [React Native](https://facebook.github.io/react-native/) - v0.54, a powerful language used to create mobile applications blessed by the data-mining company, Facebook Inc.
+* [yarn](https://yarnpkg.com/en/) - v1.5.1, dependency management
 * [axios](https://github.com/axios/axios) - "Promise based HTTP client for the browser and node.js"
 * [RESTful](https://restfulapi.net/) - Used for stuff
 * [Quizlet API 2.0](https://quizlet.com/api/2.0/docs) - API that was used to interpret data and create quizzes in flash-card form
