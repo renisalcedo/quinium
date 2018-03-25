@@ -48,8 +48,8 @@ export default class Api extends Component {
       })
       .catch(function(err){
         console.log(err)
-    })
-  }
+      })
+   }
 
   // Will search the term searched by the user
   searchSets(query) {
