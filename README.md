@@ -19,7 +19,7 @@ This app is currently being worked on and is top-secret. We are unable to public
 * **Reni Salcedo** - [renisalcedo](https://github.com/renisalcedo)
 * **Thotsaphon (Ben) Janrungrodsakun** - [ThotsaphonB](https://github.com/ThotsaphonB)
 * **Maksymilian (Max) M. Rago** - [maksymilianmrago](https://github.com/maksymilianmrago) and [117chan](https://gitgud.io/117chan)
-* **Winnie Tan** - [bubble29](https://github.com/bubble29)
+* **Winnie Tam** - [bubble29](https://github.com/bubble29)
 * **Vincent Xie** - [PokeLegoCuber](https://github.com/PokeLegoCuber)
 
 ## License
@@ -31,4 +31,4 @@ This project is licensed by the MIT License.
 * HackNYU
 * HackNYU Sponsors
 * HackNYU Volunteers
-* My Mom
+* My Mom (No u)
