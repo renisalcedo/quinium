@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 import axios from 'axios';
 
+// Quiz Component
+import Quiz from '../Quiz/4_questions'
+
 export default class Api extends Component {
   constructor(props) {
     super(props)
@@ -11,7 +14,7 @@ export default class Api extends Component {
       termQuery: props.termQuery,
       searchQuery: '',
       quizId: 0,
-      quizSets: [],
+      sets: [],
     }
 
     // Functions constructors
@@ -29,11 +32,15 @@ export default class Api extends Component {
   }
 
   render() {
-    return (
-      <View>
-        {/* The Quiz Component Goes Here */}
-      </View>
-    )
+    if(this.state.sets) {
+      return (
+        <View style={{ flex: 1 }}>
+          <Quiz sets={ this.state.sets } />
+        </View>
+      )
+    } else {
+      return <Text>LOADING ...</Text>
+    }
   }
 
   // Search for the content beased on the user previous search
@@ -56,7 +63,7 @@ export default class Api extends Component {
     axios.get(`https://api.quizlet.com/2.0/sets/${query}?client_id=wEGVnCKvGn&whitespace=1`)
       .then(res => {
         // Set the sets for the data to be used for the quizzes
-        this.setState({ quizSets: res.data.terms })
+        this.setState({ sets: res.data.terms })
       })
       .catch(err => console.log(err))
   }
