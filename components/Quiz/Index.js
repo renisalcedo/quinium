@@ -1,6 +1,6 @@
     function getRandomInt(max) 
-		{
-  		return Math.floor(Math.random() * Math.floor(max));
+    {
+      return Math.floor(Math.random() * Math.floor(max));
     }
 
     var qAmount = 6; //Passed variable from API component (determines the amount of questions to be generated)
@@ -20,20 +20,20 @@
         flashSize[i] = [qId[i], qTerm[i], qDef[i]];
     }
 
-		if (qAmount < 4) {
+    if (qAmount < 4) {
       //run either swipe or manual input
     }
 
-		else { 
+    else { 
       //4 questions are required for mChoices
       mChoices(flashSize);
     }
-		
-		//----- MULTIPLE CHOICE -----//
-		//the following function will organize the array terms and generate multiple choice options that will be passed to question generator
-		//question generator will then use that information and determine whether a question has been answer right or wrong
-		function mChoices(flashSize)
-		{
+    
+    //----- MULTIPLE CHOICE -----//
+    //the following function will organize the array terms and generate multiple choice options that will be passed to question generator
+    //question generator will then use that information and determine whether a question has been answer right or wrong
+    function mChoices(flashSize)
+    {
       
       //creates an exact duplicate of the original array (this is done to remove elements later)
       var mirrorArray = flashSize.slice();
@@ -46,34 +46,34 @@
         
         var questionAsked = mirrorArray[i][1];
         var correctAnswer = mirrorArray[i][2];
-				 
+         
         var a = correctAnswer;
         var b = mirrorArray[getRandomInt(qAmount)][2];//May need to make parameter qAmount-1
         var c = mirrorArray[getRandomInt(qAmount)][2];//May need to make parameter qAmount-1
         var d = mirrorArray[getRandomInt(qAmount)][2];//May need to make parameter qAmount-1
       
-      	console.log(questionAsked);
+        console.log(questionAsked);
         console.log(a, b, c, d);
         
-				var userInput;
+        var userInput;
         if (userInput === correctAnswer) {
           correct++;
         }
       }
     }
-		
+    
 
-		//the following function will generate a full question and determine whether the answer is correct or not
-		function mQuestionGenerator(flashSize) 
-		{
-  			console.log("Hitlet " + flashSize[1][2]);
-		}
-		
-		//----- SWIPE -----//
-		
-		//basic premise, left swipe = false, right swipe = true. If true correctAnswers is incremetned, if false incorrectAnswers is incremented
-		
-		//----- USER TERM INPUT -----//
+    //the following function will generate a full question and determine whether the answer is correct or not
+    function mQuestionGenerator(flashSize) 
+    {
+        console.log("Hitlet " + flashSize[1][2]);
+    }
+    
+    //----- SWIPE -----//
+    
+    //basic premise, left swipe = false, right swipe = true. If true correctAnswers is incremetned, if false incorrectAnswers is incremented
+    
+    //----- USER TERM INPUT -----//
 
-		//basic premise, compare a string to another (non case sensative) and see if the user got the answer correct
-		//same concept with incrementing as the swipe and multiple choice features
+    //basic premise, compare a string to another (non case sensative) and see if the user got the answer correct
+    //same concept with incrementing as the swipe and multiple choice features

@@ -5,7 +5,7 @@ import { View } from 'react-native'
 import Camera from './Camera/Index'
 import Quiz from './Quiz/Index'
 import Navigation from './Navigation/Index'
-import Api from './Api/Index'
+import TextData from './Camera/TextData'
 
 class App extends Component {
   render() {
