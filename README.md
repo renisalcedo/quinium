@@ -32,4 +32,4 @@ This project is licensed by the MIT License.
 * HackNYU
 * HackNYU Sponsors
 * HackNYU Volunteers
-* My Mom (No u)
+* My Mom
