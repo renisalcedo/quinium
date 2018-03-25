@@ -7,8 +7,8 @@ This app is currently being worked on and is top-secret. We are unable to public
 ## Built With
 
 * [JavaScript](https://www.javascript.com/) - The foundation
-* [React Native](https://facebook.github.io/react-native/) - The core "v8.10.0"
-* [yarn](https://yarnpkg.com/en/) - Dependency management "v1.5.1"
+* [React Native](https://facebook.github.io/react-native/) - The core v8.10.0
+* [yarn](https://yarnpkg.com/en/) - Dependency management v1.5.1
 * [axios](https://github.com/axios/axios) - "Promise based HTTP client for the browser and node.js"
 * [RESTful](https://restfulapi.net/) - Used for stuff
 * [Quizlet API 2.0](https://quizlet.com/api/2.0/docs) - API that was used to interpret data and create quizzes in flash-card form
