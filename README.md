@@ -6,11 +6,11 @@ This app is currently being worked on and is top-secret. We are unable to public
 
 ## Built With
 
-* [Python](https://www.python.org/downloads/release/python-360/) - 3.6 (Because 2.7 is dying)
-* [Keras](https://keras.io) - Easier than TensorFlow
-* [TensorFlow](https://www.tensorflow.org) - Unfortunately, we ended up having to use it
-* [Julia](https://julialang.org) - Better than Python
-* [JavaScript](https://www.javascript.com) - We must use node.js
+* [JavaScript](https://www.javascript.com/) - The foundation
+* [React Native](https://facebook.github.io/react-native/) - The core "v8.10.0"
+* [axios](https://github.com/axios/axios) - "Promise based HTTP client for the browser and node.js"
+* [RESTful](https://restfulapi.net/) - Used for stuff
+* [Quizlet API 2.0](https://quizlet.com/api/2.0/docs) - API that was used to interpret data and create quizzes in flash-card form
 
 ## Authors
 
