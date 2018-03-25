@@ -15,11 +15,11 @@ export default class Example extends Component {
       </View>
     </TouchableOpacity>
   );
-  
+
     _renderButtonQuestion = (text) => (
     <View style={styles.buttonQuestion}>
         <Text>{text}</Text>
-    </View>    
+    </View>
   );
 
   _renderModalContent = () => (
@@ -28,7 +28,7 @@ export default class Example extends Component {
       {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
     </View>
   );
-  
+
     _renderModalContentIncorrect = () => (
     <View style={styles.modalContent}>
       <Text>Sorry! The correct answer was VARIABLE.</Text>
@@ -38,18 +38,18 @@ export default class Example extends Component {
 
   render() {
     return (
-      
+
       <View style={styles.container}>
         {this._renderButtonQuestion('What is the constant value of pi as it approaches this arbitrary value 123123?', () =>this.setState({ visibleModal: 0 }))}
-      
+
         {this._renderButton('A.' + "   " + qDef[0], () => this.setState({ visibleModal: 1 }))}
-      
+
         {this._renderButton('B.' + "   " + qDef[1], () => this.setState({ visibleModal: 2 }))}
-        
+
         {this._renderButton('C.' + "   " + qDef[2], () => this.setState({ visibleModal: 2 }))}
-        
+
         {this._renderButton('D' + "   " + qDef[3], () => this.setState({ visibleModal: 2 }))}
-        
+
         //For question
         <Modal
           isVisible={this.state.visibleModal === 0}
@@ -64,7 +64,7 @@ export default class Example extends Component {
         >
           {this._renderModalContentIncorrect()}
         </Modal>
-        
+
         //For right answer
         <Modal
           isVisible={this.state.visibleModal === 1}
@@ -79,7 +79,7 @@ export default class Example extends Component {
         >
           {this._renderModalContent()}
         </Modal>
-        
+
         //For wrong answer
         <Modal
           isVisible={this.state.visibleModal === 2}
@@ -94,7 +94,7 @@ export default class Example extends Component {
         >
           {this._renderModalContentIncorrect()}
         </Modal>
-        
+
       </View>
     );
   }
