@@ -12,8 +12,9 @@ const Tabs = TabNavigator({
       <Ionicons
         name={focused ? 'ios-camera' : 'ios-camera-outline'}
         size={29}
-        style={{color:tintColor}}
+        style={{color: 'orange'}}
       />
+
     )
   }
 },
@@ -26,7 +27,7 @@ Quiz: {
         <Ionicons
           name={focused ? 'ios-book' : 'ios-book-outline'}
           size={29}
-          style={{color:tintColor}}
+          style={{color: 'orange'}}
         />
       )
     }
