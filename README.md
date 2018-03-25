@@ -7,8 +7,8 @@ This app is currently being worked on and is top-secret. We are unable to public
 ## Built With
 
 * [JavaScript](https://www.javascript.com/) - The foundational language
-* [Node.js](https://nodejs.org/en/) - v8.10.0, the gift sent from the High Heavens
-* [React Native](https://facebook.github.io/react-native/) - v0.54, a powerful language used to create mobile applications blessed by the data-mining company, Facebook Inc.
+* [Node.js](https://nodejs.org/en/) - v8.10.0, a gift sent from the High Heavens and is a favourite of the Hackathon Hackers group
+* [React Native](https://facebook.github.io/react-native/) - v0.54, a powerful framework that was blessed by the data-mining company, Facebook Inc. The user is bestowed with the power to build native mobile apps using only JavaScript and React
 * [yarn](https://yarnpkg.com/en/) - v1.5.1, dependency management
 * [axios](https://github.com/axios/axios) - "Promise based HTTP client for the browser and node.js"
 * [RESTful](https://restfulapi.net/) - Used for stuff
@@ -31,4 +31,4 @@ This project is licensed by the MIT License.
 * HackNYU
 * HackNYU Sponsors
 * HackNYU Volunteers
-* My Mom
+* My Mom (No u)
