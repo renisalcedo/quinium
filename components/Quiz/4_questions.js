@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   View,
+  ScrollView,
 } from 'react-native';
 import Modal from 'react-native-modal'; // 2.4.0
 var qDef = ["A1","A2","A3","A4","A5","A6"];
@@ -16,9 +17,13 @@ export default class Example extends Component {
       visibleModal: null,
       sets: [],
       loading: true,
+      onProgress: false,
+      answer: '',
+      assigned: false,
     }
 
     this.renderQuiz = this.renderQuiz.bind(this)
+    this.randomOpt = this.randomOpt.bind(this)
   }
 
   componentDidUpdate(prevProps, prevStates) {
@@ -28,7 +33,7 @@ export default class Example extends Component {
   }
 
   _renderButton = (text, onPress) => (
-    <TouchableOpacity onPress={onPress, (e) => console.log(e)}>
+    <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
         <Text>{text}</Text>
       </View>
@@ -44,21 +49,24 @@ export default class Example extends Component {
   _renderModalContent = () => (
     <View style={styles.modalContent}>
       <Text>Correct!</Text>
-      {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
+      {this._renderButton('Close', () => this.setState({ visibleModal: null, onProgress: false }))}
     </View>
   );
   
     _renderModalContentIncorrect = () => (
     <View style={styles.modalContent}>
-      <Text>Sorry! The correct answer was VARIABLE.</Text>
-      {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
+      <Text>Sorry try again!</Text>
+      {this._renderButton('Close', () => this.setState({ visibleModal: null, onProgress: false }))}
     </View>
   );
 
   render() {
       return (
         <View style={styles.container}>
-          {this.renderQuiz()}
+
+          <ScrollView contentContainerStylestyle={{ flexGrow: 2, justifyContent: 'center' }}>
+            {this.renderQuiz()}
+          </ScrollView>
 
           <Modal
             isVisible={this.state.visibleModal === 0}
@@ -107,17 +115,47 @@ export default class Example extends Component {
     }
 
   renderQuiz() {
+    let count = 0
     return this.state.sets.map((res, key) => {
-      return (
-        <View>
-          {this._renderButtonQuestion(res.definition, () => this.setState({ visibleModal: 0, onProgress: 0 }))}
-          {this._renderButton('A.' + "   " + qDef[0], () => this.setState({ visibleModal: 1, onProgress: 1 }))}
-          {this._renderButton('B.' + "   " + qDef[1], () => this.setState({ visibleModal: 2, onProgress: 3 }))}
-          {this._renderButton('C.' + "   " + qDef[2], () => this.setState({ visibleModal: 2, onProgress: 4 }))}
-          {this._renderButton('D' + "   " + qDef[3],  () =>  this.setState({ visibleModal: 2, onProgress: 5 }))}
-        </View>
-      )
+
+      if(res.definition) count += 1
+
+      if(!this.state.onProgress && count < 5) {
+        {() => this.setState({ onProgress: true, answer: res.term, assign: false })}
+        const choices = [this.randomOpt(res.term, 0), this.randomOpt(res.term, 1),
+                         this.randomOpt(res.term, 2), this.randomOpt(res.term, 3)]
+        return (
+          <View>
+            {this._renderButtonQuestion(res.definition, () => this.setState({ visibleModal: 0, onProgress: false }))}
+            {this._renderButton('A.' + "   " + choices[0], () => this.setState({ visibleModal: choices[0] === res.term ? 1 : 2 }))}
+            {this._renderButton('B.' + "   " + choices[1], () => this.setState({ visibleModal: choices[1] === res.term ? 1 : 2 }))}
+            {this._renderButton('C.' + "   " + choices[2], () => this.setState({ visibleModal: choices[2] === res.term ? 1 : 2 }))}
+            {this._renderButton('D' + "   " + choices[3],  () =>  this.setState({ visibleModal: choices[3] === res.term ? 1 : 2 }))}
+          </View>
+        )
+      }
     })
+  }
+
+  // Will give a random value to each option
+  randomOpt(ans, count) {
+    const arr = this.state.sets
+    const random = Math.floor(Math.random() * arr.length)
+
+    if(count >= 3 && !this.state.assign) {
+      this.setState({ assign: true })
+      return ans
+    }
+
+    if(this.state.assign)
+      return arr.filter(res => res !== ans)[random].term
+
+    const choice = arr[random].term
+    if(choice === ans) {
+      this.setState({ assign: true })
+    }
+
+    return choice
   }
 }
 
@@ -131,7 +169,7 @@ const styles = StyleSheet.create({
     padding: 12,
     margin: 16,
     height: 100,
-    width: 300,
+    width: 400,
     justifyContent: 'center',
     alignItems: 'center',
   },
