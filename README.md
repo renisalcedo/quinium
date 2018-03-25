@@ -14,7 +14,7 @@ This app is currently being worked on and is top-secret. We are unable to public
 
 ## Authors
 
-* **My Boi, Reni Salcedo** - [renisalcedo](https://github.com/renisalcedo)
+* **Reni Salcedo** - [renisalcedo](https://github.com/renisalcedo)
 * **Thotsaphon (Ben) Janrungrodsakun** - [ThotsaphonB](https://github.com/ThotsaphonB)
 * **Maksymilian (Max) M. Rago** (https://github.com/maksymilianmrago and https://gitgud.io/117chan)
 * **Winnie Tan** - [bubble29](https://github.com/bubble29)
