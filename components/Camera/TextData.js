@@ -15,12 +15,15 @@ class TextData extends Component {
     }
 
     this.parseData = this.parseData.bind(this)
+    this.removeLineBreaking = this.removeLineBreaking.bind(this)
+    this.mostRepeated = this.mostRepeated.bind(this)
+    this.setQuery = this.setQuery.bind(this)
   }
 
   // Initial state of the app
   componentDidUpdate(prevProps, prevStates) {
     if(prevProps.data !== this.props.data) {
-      this.parseData()
+      this.setQuery()
     }
   }
 
@@ -38,19 +41,62 @@ class TextData extends Component {
     }
   }
 
-  // Will take 2 words from the data text
-  parseData() {
-    let text = this.props.data
-    let words = []
+  // Will remove all line breaking in a list
+  removeLineBreaking() {
+    let word = this.props.data.toLowerCase()
+    word = word.replace(/(\r\n|\n|\r)/gm,"")
+    word = word.replace(/(\r\n|\n|\r)/gm," ")
+    word = word.replace(/\s+/g," ")
 
-    // If the next word is a space away it takes that word
-    for(let i = 0; i < text.length; i++) {
-      if(text[i+1] === ' ' && words.length <= 2) {
-        words.push(text[i])
+    return word
+  }
+
+
+  // Will parse the data and break it into words
+  parseData() {
+    let text = this.removeLineBreaking()
+    let words = text.split(' ')
+
+    return words
+  }
+
+  // Returns most repeated character in a list
+  mostRepeated(words) {
+    if(words.length == 0)
+      return null
+      let modeMap = {}
+      let maxEl = words[0], maxCount = 1
+
+    for(let i = 0; i < words.length; i++) {
+      let el = words[i]
+
+      if(modeMap[el] == null)
+        modeMap[el] = 1
+      else
+        modeMap[el]++;
+
+      if(modeMap[el] > maxCount) {
+        maxEl = el
+        maxCount = modeMap[el]
       }
     }
+    return maxEl
+  }
 
-    this.setState({ termQuery: words })
+  setQuery() {
+    // Get parsed and most repeated for first set
+    const parsed = this.parseData()
+    const firstRepeated = this.mostRepeated(parsed)
+
+    // gets second parsed and most repeated for second set
+    const secondParse = parsed.filter(val => val !== firstRepeated)
+    const secondRepeated = this.mostRepeated(secondParse)
+
+    // Combines the outout query
+    const query = firstRepeated + ' ' + secondRepeated
+
+    // Sets the term query
+    this.setState({ termQuery: query })
   }
 }
 

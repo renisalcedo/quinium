@@ -104,7 +104,7 @@ export default class CameraComponent extends React.Component {
   }
 
   uploadPicture() {
-    const url = 'https://5232a4d4.ngrok.io/recognize'
+    const url = 'https://9c95b53d.ngrok.io/recognize'
 
     const form = new FormData()
 
