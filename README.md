@@ -31,4 +31,4 @@ This project is licensed by the MIT License.
 * HackNYU
 * HackNYU Sponsors
 * HackNYU Volunteers
-* My Mom
+* My Mom (No u)
