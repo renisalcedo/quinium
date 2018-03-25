@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 import Modal from 'react-native-modal'; // 2.4.0
-var qDef = ["A1","A2","A3","A4","A5","A6"]
+var qDef = ["A1","A2","A3","A4","A5","A6"];
 
 export default class Example extends Component {
   state = {
