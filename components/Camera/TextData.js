@@ -31,9 +31,7 @@ class TextData extends Component {
   render() {
     if(this.props.data.length > 0) {
       return (
-        <View>
           <Api termQuery={ this.state.termQuery } />
-        </View>
       )
     }
     else {
