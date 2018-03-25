@@ -10,13 +10,16 @@ export default class CameraComponent extends React.Component {
   constructor(props) {
     super(props)
 
+    // Function Contructors
     this.takePicture = this.takePicture.bind(this)
     this.uploadPicture = this.uploadPicture.bind(this)
   }
 
+  // Initial States of the app
   state = {
     hasCameraPermission: null,
     type: Camera.Constants.Type.back,
+    submit: false,
   };
 
   async componentWillMount() {
@@ -82,7 +85,7 @@ export default class CameraComponent extends React.Component {
             </View>
           </Camera>
 
-          <TextData data={ this.state.textData } />
+          <TextData data={ this.state.textData } submit={ this.state.submit } />
         </View>
       );
     }
@@ -101,7 +104,8 @@ export default class CameraComponent extends React.Component {
   }
 
   uploadPicture() {
-    const url = 'https://c08c8de0.ngrok.io/recognize'
+    const url = 'https://5232a4d4.ngrok.io/recognize'
+
     const form = new FormData()
 
     form.append('recognize', {
@@ -115,9 +119,13 @@ export default class CameraComponent extends React.Component {
         'Content-Type': 'multipart/form-data'
       }
     })
-      .then(res => {
-        this.setState({ textData: res.data })
+
+    .then(res => {
+      this.setState({
+        textData: res.data,
+        submit: true,
       })
-      .catch(err => console.log(err))
+    })
+    .catch(err => console.log(err))
   }
 }

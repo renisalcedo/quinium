@@ -5243,6 +5243,10 @@ react-lifecycles-compat@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-1.0.2.tgz#551d8b1d156346e5fcf30ffac9b32ce3f78b8850"
 
+react-loading@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-loading/-/react-loading-1.0.4.tgz#9bd8c78313f61796551f47e6530d8eae1b593e09"
+
 react-native-branch@2.0.0-beta.3:
   version "2.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-2.0.0-beta.3.tgz#2167af86bbc9f964bd45bd5f37684e5b54965e32"
