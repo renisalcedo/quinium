@@ -7,7 +7,7 @@ This app is currently being worked on and is top-secret. We are unable to public
 ## Built With
 
 * [JavaScript](https://www.javascript.com/) - The foundational language
-* [Node.js](https://nodejs.org/en/) - v8.10.0, the gift sent from the High Heavens
+* [Node.js](https://nodejs.org/en/) - v8.10.0, a gift sent from the High Heavens and is a favourite of the Hackathon Hackers
 * [React Native](https://facebook.github.io/react-native/) - v0.54, a powerful language used to create mobile applications blessed by the data-mining company, Facebook Inc.
 * [yarn](https://yarnpkg.com/en/) - v1.5.1, dependency management
 * [axios](https://github.com/axios/axios) - "Promise based HTTP client for the browser and node.js"
