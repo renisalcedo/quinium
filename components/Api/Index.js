@@ -57,7 +57,6 @@ export default class Api extends Component {
       .then(res => {
         // Set the sets for the data to be used for the quizzes
         this.setState({ quizSets: res.data.terms })
-
       })
       .catch(err => console.log(err))
   }
