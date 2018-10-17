@@ -19,7 +19,7 @@ This app is currently being worked on and is top-secret. We are unable to public
 
 * **Reni Salcedo** - [renisalcedo](https://github.com/renisalcedo)
 * **Thotsaphon (Ben) Janrungrodsakun** - [ThotsaphonB](https://github.com/ThotsaphonB)
-* **Maksymilian (Max) M. Rago** - [maksymilianmrago](https://github.com/maksymilianmrago) and [117chan](https://gitgud.io/117chan)
+* **Maksymilian (Max) M. Rago** - [maksrago](https://github.com/maksrago) and [117chan](https://gitgud.io/117chan)
 * **Winnie Tam** - [bubble29](https://github.com/bubble29)
 * **Vincent Xie** - [PokeLegoCuber](https://github.com/PokeLegoCuber)
 
